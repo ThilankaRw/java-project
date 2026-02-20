@@ -1,0 +1,52 @@
+﻿=== Smart City Route Planner û CityGraph Demo ===
+
+-- Populating BST --
+[BST] Inserted city: "Colombo"
+[BST] Inserted city: "Kandy"
+[BST] Inserted city: "Galle"
+[BST] Inserted city: "Matara"
+[BST] Inserted city: "Jaffna"
+[BST] Inserted city: "Anuradhapura"
+
+-- addLocation --
+[Graph] Added location: "Colombo"
+[Graph] Added location: "Kandy"
+[Graph] Added location: "Galle"
+[Graph] Added location: "Matara"
+[Graph] Added location: "Jaffna"
+[Graph] Location "Colombo" already exists in the graph.
+[Graph] Cannot add "Badulla" û not found in the BST validator. Insert it into the BST first.
+
+-- addRoad --
+[Graph] Road added: "Colombo" ? "Kandy"
+[Graph] Road added: "Colombo" ? "Galle"
+[Graph] Road added: "Galle" ? "Matara"
+[Graph] Road added: "Kandy" ? "Jaffna"
+[Graph] Road already exists between "Colombo" and "Kandy".
+[Graph] Cannot add road û source and destination are the same city: "Colombo"
+[Graph] Cannot add road û "Badulla" is not in the graph. Add it with addLocation() first.
+
+-- displayConnections (initial) --
+[Graph] Current city connections:
+  Colombo  ?  [Galle, Kandy]
+  Galle    ?  [Colombo, Matara]
+  Jaffna   ?  [Kandy]
+  Kandy    ?  [Colombo, Jaffna]
+  Matara   ?  [Galle]
+
+-- removeRoad --
+[Graph] Road removed: "Colombo" ? "Galle"
+[Graph] No road found between "Kandy" and "Matara".
+
+-- removeLocation --
+[Graph] Removed location "Kandy" and all its connected roads.
+[Graph] Cannot remove "Anuradhapura" û location not found in the graph.
+
+-- displayConnections (after removals) --
+[Graph] Current city connections:
+  Colombo  ?  [no roads]
+  Galle    ?  [Matara]
+  Jaffna   ?  [no roads]
+  Matara   ?  [Galle]
+
+=== Demo complete ===
